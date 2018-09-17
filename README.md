@@ -1,2 +1,4 @@
 # STAT-545_participation
-STAT 545 work in-class, as of Lecture September 11. 
+STAT 545 work in-class, one folder per class.
+
+
