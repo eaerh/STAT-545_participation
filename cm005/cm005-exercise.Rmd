@@ -132,6 +132,21 @@ Your task is to use metaprogramming to check whether a response (like the one ab
 2. Find all entries of Canada, and entries of Algeria occuring in the '60s. 
 3. Find all entries _not_ including Canada and Algeria.
 
+```{r echo=FALSE}
+gapminder %>% 
+  filter((country == "Canada" | country == "Algeria") & year >= 1960 & year < 1970 ) 
+
+gapminder %>% 
+  filter(country %in% c("Canada" ,"Algeria"), 
+         year >= 1960, 
+         year < 1970)
+
+
+
+
+```
+
+
 # Bonus Exercises
 
 If there's time remaining, we'll practice with these three exercises. I'll give you 1 minute for each, then we'll go over the answer.
