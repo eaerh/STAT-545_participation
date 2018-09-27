@@ -220,8 +220,7 @@ __Exercise 1__: Make a plot of `year` (x) vs `lifeExp` (y), with points coloured
 
 ```{r}
 ggplot(gapminder, aes(year, lifeExp)) + 
-  geom_point(aes(colour = continent)) +
-  geom_line(aes(fill =continent))
+  geom_point(aes(colour = continent)) 
 ```
 
 
