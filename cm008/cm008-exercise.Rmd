@@ -1,6 +1,6 @@
 ---
 title: "cm008 Exercises"
-output: github_notebook
+output: github_document
 
 ---
 
@@ -204,11 +204,10 @@ gapminder %>%
 2. Compute the relative gdp (NOT per capita!) of each country compared to Canada (= GDP of a country / GDP of Canada).
 
 ```{r}
-
 cda = gapminder %>% 
   mutate(gdp = gdpPercap*pop) %>% 
   filter(country == 'Canada') %>% 
-  '[['('gdp') 
+  '[['('gdp')
 
 
 my_df = gapminder %>% 
@@ -216,8 +215,10 @@ my_df = gapminder %>%
          gdp = gdpPercap * pop, 
          rel_gdp = gdp/cda_gdp)
   
-my_df %>% 
-  filter(country == 'Canada')
+#my_df %>% 
+#  filter(country == 'Canada')
+
+
 ```
 
 Sanity check: are Canada's numbers = 1? What is the spread of numbers like (should be small)?
