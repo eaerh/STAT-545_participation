@@ -185,26 +185,77 @@ $(document).ready(function () {
 <p>Make a tibble of letters, their order in the alphabet, and then a pasting of the two columns together.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGliYmxlKGxldCA9IGxldHRlcnMsXG4gICAgICAgbnVtID0gMTpsZW5ndGgobGV0dGVycyksIFxuICAgICAgIGNvbWIgPSBwYXN0ZTAobGV0LG51bSkpXG5gYGAifQ== -->
+<pre class="r"><code>tibble(let = letters,
+       num = 1:length(letters), 
+       comb = paste0(let,num))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBMTJUeTFyQ01CQ0ZROU9xMUFzcTN0OEJQaE1WZGU4VHVITGJHMUFwYWVsRmtKVlA2Mk9JRTh5Snl1S2svemVkNUhTbWsrZW5GK20vK0l3eGgzR1hNNGNUdWc0dExlYXl0bjR1R09OZEF2M21rSFNGRndFZ0JFU0FHSkFBaG9BUllBeElBYStBQ1NBRFRBRUtrQU1Ld0F4UUFpcEFEV2dBYjRENWI1MEczZ0ZMV3ZiWEZldDI2QmI5ZE1FbGVhUXQwalpwaDZRMzZEYnVrdmJNdmdOU3gzVHRpSFJNMHAwOElaMlN6a2pucEF2U3BmSDUyMkVuRUtCUWdxSWJVSHdMU3U1QXd3Rm9kQThhUDREU1IwUDhWVndESndJdVBCT3c0Vk1CSDY0RWpIZ3U0TVFMQVNzK0UvRGlwWUFacjRSMXE2VjFhNlIxZTVQV2JTNnQyMEphdDNkcDNaWnlzREdYWHBRRlZXVTZocUFmQjNYUUg1YkJOTmxNVnhSRE9yY0ZKN1d0c3NHTXVWRStEVGUydDh0ODNzY1IrdDg2SDdTc1ZxdFBlbnh0SkcvblJaM21pbEtkcmhtVnZ4OUo4L2svMEdtVVBqcnVSZU5HVFhvRE0wcDY1Sml4YTVueEFQTWZTNzR5UjNubXFLMUVqVktGVytkbFFaamdEaDFRQ2VzSytrV1pLdFR0VTdUcTEza2RJTStQOGd5UmRXM3M2eHVJWXVXN0pnUUFBQT09In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["let"],"name":[1],"type":["chr"],"align":["left"]},{"label":["num"],"name":[2],"type":["int"],"align":["right"]},{"label":["comb"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"a","2":"1","3":"a1"},{"1":"b","2":"2","3":"b2"},{"1":"c","2":"3","3":"c3"},{"1":"d","2":"4","3":"d4"},{"1":"e","2":"5","3":"e5"},{"1":"f","2":"6","3":"f6"},{"1":"g","2":"7","3":"g7"},{"1":"h","2":"8","3":"h8"},{"1":"i","2":"9","3":"i9"},{"1":"j","2":"10","3":"j10"},{"1":"k","2":"11","3":"k11"},{"1":"l","2":"12","3":"l12"},{"1":"m","2":"13","3":"m13"},{"1":"n","2":"14","3":"n14"},{"1":"o","2":"15","3":"o15"},{"1":"p","2":"16","3":"p16"},{"1":"q","2":"17","3":"q17"},{"1":"r","2":"18","3":"r18"},{"1":"s","2":"19","3":"s19"},{"1":"t","2":"20","3":"t20"},{"1":"u","2":"21","3":"u21"},{"1":"v","2":"22","3":"v22"},{"1":"w","2":"23","3":"w23"},{"1":"x","2":"24","3":"x24"},{"1":"y","2":"25","3":"y25"},{"1":"z","2":"26","3":"z26"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[26]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Make a tibble of three names and commute times.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHJpYmJsZSh+bmFtZSwgfnRpbWUsXG4gICAgICAgIFwiVmV0bGVcIiwgMzAsIFxuICAgICAgICBcIkVsaWFzXCIsIDE1LFxuICAgICAgICBcIkVyaWsgQXJuZVwiLCA0MClcbmBgYCJ9 -->
+<pre class="r"><code>tribble(~name, ~time,
+        &quot;Vetle&quot;, 30, 
+        &quot;Elias&quot;, 15,
+        &quot;Erik Arne&quot;, 40)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUEyVlF6VzdDTUF3MlNUdlVTckJKZTRHOUFEbE0yblVDQ1Y2QUErS2FsUUFSV1lMU0lIYmNpME54Z2pOdG5hWEU5dWZQdjh2NStyVmUxd0RBZ0JjY0dFZXpZUGdOb0lBcTZpOEEvcHdJQUUvNE9BWEtsUXBHWldkaHRHekpxUlplSDE1bTNpcDB4akZsK2c1SnBvTDBIRWorOUNvYkk5dVcrbVN3M3NnZ3hkYkxUOVduVzhReW5SRllSRERiUWY5THFydzdpNXc0aW9uZitIVmRkMEYxN1pHSDdoaTBzMGhsOFFSbGI3U0I3d0dQSnh0TGJ5Yk4vbVFQazdjNGZncmZaVVEyLzJXemUwdmVVYW1TU2owb3U5UDI1NzVHZmloRHpoaFhTQnVJbzljMjVEc2gyb3JnZ3N5OHVuRW1JMmszdU40QTYzQlVEUEFCQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["time"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"Vetle","2":"30"},{"1":"Elias","2":"15"},{"1":"Erik Arne","2":"40"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Write the <code>iris</code> data frame as a <code>csv</code>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfY3N2KGlyaXMsIFwiaXJpcy5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>write_csv(iris, &quot;iris.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Write the <code>iris</code> data frame to a file delimited by a dollar sign.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfZGVsaW0oaXJpcywgXCJpcmlzLnR4dFwiLCBkZWxpbSA9ICckJylcbmBgYCJ9 -->
+<pre class="r"><code>write_delim(iris, &quot;iris.txt&quot;, delim = '$')</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Read the dollar-delimited <code>iris</code> data to a tibble.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVhZF9kZWxpbShcImlyaXMudHh0XCIsIGRlbGltID0gJyQnKVxuYGBgIn0= -->
+<pre class="r"><code>read_delim(&quot;iris.txt&quot;, delim = '$')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBTZXBhbC5MZW5ndGggPSBjb2xfZG91YmxlKCksXG4gIFNlcGFsLldpZHRoID0gY29sX2RvdWJsZSgpLFxuICBQZXRhbC5MZW5ndGggPSBjb2xfZG91YmxlKCksXG4gIFBldGFsLldpZHRoID0gY29sX2RvdWJsZSgpLFxuICBTcGVjaWVzID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
+<pre><code>Parsed with column specification:
+cols(
+  Sepal.Length = col_double(),
+  Sepal.Width = col_double(),
+  Petal.Length = col_double(),
+  Petal.Width = col_double(),
+  Species = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6MTUwfSwicmRmIjoiSDRzSUFBQUFBQUFBQSsyWnpXNGJWUlRISi81SWJNZEpuUy9YY2RQMkNlb0ZyTHFxRnl4WklMcWdXK05NMndGalI3WmJXUElVa2VCTitnaElaY1dxdTBwOWdWUWdSRVhsTVBiOGY1ZmtiMGF1eEFJaGVTVG4rSHovejdsMzdqMUpQdi9rMFVlMVI3VW9pZ3BSc1ZTTUNzWDBhNm1RL3RpSVNsRjFUcitMb3VKQitxV2NmbmJUejNuMzhQSGk2Ujc4TUg5KzdPNi9uRDgvZC9jbFA0d1dUL2NJdmNuM0pNY2Z1NE9QRjArZ2U2STNSWnZLZ3owNGtNTzdQdVFIdCtLQkoxRGlVSThvOWlHdTVFMzVVUWR4WEw1bmVMRGJ0MzRFSEk3VDZqZ3kvQ2VpeDRwelN4UWNiWEFKOXpGOWxsMGJYTlF2KzV2U3Q4UzM2TGRvbXo2SVo1MWFMaWVPZVBJSDNuRGNrcDc0TGNOUFhkQ1ExL1lkZk52cUJwZkhhVmtkWVQxdG4wR3AwL2NoZVloelluV3pIbmZzUGJwdGRaK0lZaC9XMTk0SDhvUStFbDk2S1AwSSswUDU3eGh1ejArZHZsN29iNHUvSzRyZTE5bnpITnM2Z1l2ODhOVG4rOExYbGJyQnEzMFh6cTI2OUJYUnF1SlhaRjhYdmFGNDIwYTNSTEhma1QvNmlzVnYyUHROWEhEc3FpOVE0aEFYUERYVEUzL2I0c0Y3WGNnYml0T1FIRDMyeENGdlhwNkM0cmdmZFZTTXg0NjZhaVozdk1UZk5JcGYwZGFqTFAvSStyOGgrWmJaVjZ3Ky9MRXYyZjRnUDNMNEVNL2s4T2hMeWdmdW91R0dlcis5SCtqQlViSTZTbWJ2Y2IwUFhrOXRoWi92NzVMcDRldTJyenllNTYyYW5uMURQYXlMcjhlbTRmVjk1ZXVSeCs5YXZMRGVPZStCNzUvQUd5MGI3cHJscHc5TDhTT2V4Ym4xNFBmTUw5RGZzdmdQL3NpTWd2elB6RC93cm9lSHZzdHdCZjFiOGI4cURuYms4enpvbmI4dytVeCs1SU02dmp4OVhoM2dkSHplSDNpbjVBR2Y0OGpwNDkvenJ0YU4rN3NobmprTlBmYXNQM3EvRHppWEcrYkgrOFE5UXR5RzVTSGVBZWU5NFNNZWMzV1l3OFg3WE9ybk91YzNlUTY5VHNOTi9IRHZTQi9xTURuOUNYMHdDdTV3djhxZStRRTh6SnROZVBtMURhL1BhY3dwNGZjSXlaa1BmVDUzdmM4dFlYNlVQTXpieG9kNWt2VmlIWFBxOERtc2FiamhmVjV2V3Z5akhQK2xQZ3FmLzM0QWI3OXZSWnhiUCtrOVdrVmZpZjZpOTluMUwzTDhYdVRvWHhrbHJsTzNoMyt0OXowUDU0ZldrNGY3USt2THcvdEcvS3ErT2ZYenpNOUg1OS9KNzhMa3hMbXdPUERvM2Q3dDRMbDMzdHY1dk9xY2grYmRQMjhOUDNHb3krL0JWZmNGL3VTRjkvNDRYaWg0eEhQL2MvOTBJOW1wRDJIdVFVNmQ3ODJPT1NMNjUzakl3OXlwK1hBcFQrSDZPb1U1TXJMNCtCbmVKVnpvNmUvTTRtMVkzOVhYa0xlWVV5OTFlVDB6OHk5ZHIyTXB2L1VoRlRYU3o3bis4TFU1aWFlalNXL05yYm4vSFZkN0hvOG5TWDgwR0kzWGtyVmtMZmtQSk5YbnlmaEpNa3o2dmJWZ0xWZ0wvbzNnK3I4a3kvMUJiektKc25FTlllMjBOKzExSG85NzM4UnVQa3hsbUpjbHJEK016M3FEenFmeDhNbjBxV1RibWV5TDVEU0k2cC9GMHlXelRIYlZiT3ZoV2R4UDVrbXVaYTZPUjk5MnlMNlRmZ3JmcHo4dUx5Ky9Tc25NakxkR1o5TmtORXhOQy95NzlXcDlHMk1UM0hnMm5JYyt2ZGQvK216NDliMzc4eDRzMU5tem8rL25WNzZYczVURlMydkdabHBlTW96cDE2RDNaVHdRczV1V3NLaWdjelpPaGxPYW5Vb25uZWtvN1FPUzlPaERzcWd0bXYwRmVTNm1LbHdlQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["chr"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.4","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.4","2":"2.9","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.4","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.3","2":"3.0","3":"1.1","4":"0.1","5":"setosa"},{"1":"5.8","2":"4.0","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.7","2":"4.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.3","4":"0.4","5":"setosa"},{"1":"5.1","2":"3.5","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.7","2":"3.8","3":"1.7","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.5","4":"0.3","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.7","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.7","3":"1.5","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.6","3":"1.0","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.3","3":"1.7","4":"0.5","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.9","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.0","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.6","4":"0.4","5":"setosa"},{"1":"5.2","2":"3.5","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.2","2":"3.4","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.1","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.2","2":"4.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.5","2":"4.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.2","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.5","2":"3.5","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.6","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.4","2":"3.0","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.5","2":"2.3","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.4","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.6","4":"0.6","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.9","4":"0.4","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.3","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.3","3":"1.4","4":"0.2","5":"setosa"},{"1":"7.0","2":"3.2","3":"4.7","4":"1.4","5":"versicolor"},{"1":"6.4","2":"3.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.9","2":"3.1","3":"4.9","4":"1.5","5":"versicolor"},{"1":"5.5","2":"2.3","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.5","2":"2.8","3":"4.6","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.5","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"4.7","4":"1.6","5":"versicolor"},{"1":"4.9","2":"2.4","3":"3.3","4":"1.0","5":"versicolor"},{"1":"6.6","2":"2.9","3":"4.6","4":"1.3","5":"versicolor"},{"1":"5.2","2":"2.7","3":"3.9","4":"1.4","5":"versicolor"},{"1":"5.0","2":"2.0","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.9","2":"3.0","3":"4.2","4":"1.5","5":"versicolor"},{"1":"6.0","2":"2.2","3":"4.0","4":"1.0","5":"versicolor"},{"1":"6.1","2":"2.9","3":"4.7","4":"1.4","5":"versicolor"},{"1":"5.6","2":"2.9","3":"3.6","4":"1.3","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.4","4":"1.4","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.8","2":"2.7","3":"4.1","4":"1.0","5":"versicolor"},{"1":"6.2","2":"2.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.6","2":"2.5","3":"3.9","4":"1.1","5":"versicolor"},{"1":"5.9","2":"3.2","3":"4.8","4":"1.8","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.3","2":"2.5","3":"4.9","4":"1.5","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.7","4":"1.2","5":"versicolor"},{"1":"6.4","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"6.6","2":"3.0","3":"4.4","4":"1.4","5":"versicolor"},{"1":"6.8","2":"2.8","3":"4.8","4":"1.4","5":"versicolor"},{"1":"6.7","2":"3.0","3":"5.0","4":"1.7","5":"versicolor"},{"1":"6.0","2":"2.9","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.6","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.8","4":"1.1","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.7","4":"1.0","5":"versicolor"},{"1":"5.8","2":"2.7","3":"3.9","4":"1.2","5":"versicolor"},{"1":"6.0","2":"2.7","3":"5.1","4":"1.6","5":"versicolor"},{"1":"5.4","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.0","2":"3.4","3":"4.5","4":"1.6","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.7","4":"1.5","5":"versicolor"},{"1":"6.3","2":"2.3","3":"4.4","4":"1.3","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.1","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.5","3":"4.0","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.6","3":"4.4","4":"1.2","5":"versicolor"},{"1":"6.1","2":"3.0","3":"4.6","4":"1.4","5":"versicolor"},{"1":"5.8","2":"2.6","3":"4.0","4":"1.2","5":"versicolor"},{"1":"5.0","2":"2.3","3":"3.3","4":"1.0","5":"versicolor"},{"1":"5.6","2":"2.7","3":"4.2","4":"1.3","5":"versicolor"},{"1":"5.7","2":"3.0","3":"4.2","4":"1.2","5":"versicolor"},{"1":"5.7","2":"2.9","3":"4.2","4":"1.3","5":"versicolor"},{"1":"6.2","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"5.1","2":"2.5","3":"3.0","4":"1.1","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.1","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"6.0","4":"2.5","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"7.1","2":"3.0","3":"5.9","4":"2.1","5":"virginica"},{"1":"6.3","2":"2.9","3":"5.6","4":"1.8","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.8","4":"2.2","5":"virginica"},{"1":"7.6","2":"3.0","3":"6.6","4":"2.1","5":"virginica"},{"1":"4.9","2":"2.5","3":"4.5","4":"1.7","5":"virginica"},{"1":"7.3","2":"2.9","3":"6.3","4":"1.8","5":"virginica"},{"1":"6.7","2":"2.5","3":"5.8","4":"1.8","5":"virginica"},{"1":"7.2","2":"3.6","3":"6.1","4":"2.5","5":"virginica"},{"1":"6.5","2":"3.2","3":"5.1","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.7","3":"5.3","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.0","3":"5.5","4":"2.1","5":"virginica"},{"1":"5.7","2":"2.5","3":"5.0","4":"2.0","5":"virginica"},{"1":"5.8","2":"2.8","3":"5.1","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.2","3":"5.3","4":"2.3","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.5","4":"1.8","5":"virginica"},{"1":"7.7","2":"3.8","3":"6.7","4":"2.2","5":"virginica"},{"1":"7.7","2":"2.6","3":"6.9","4":"2.3","5":"virginica"},{"1":"6.0","2":"2.2","3":"5.0","4":"1.5","5":"virginica"},{"1":"6.9","2":"3.2","3":"5.7","4":"2.3","5":"virginica"},{"1":"5.6","2":"2.8","3":"4.9","4":"2.0","5":"virginica"},{"1":"7.7","2":"2.8","3":"6.7","4":"2.0","5":"virginica"},{"1":"6.3","2":"2.7","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.2","3":"6.0","4":"1.8","5":"virginica"},{"1":"6.2","2":"2.8","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.1","2":"3.0","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.0","3":"5.8","4":"1.6","5":"virginica"},{"1":"7.4","2":"2.8","3":"6.1","4":"1.9","5":"virginica"},{"1":"7.9","2":"3.8","3":"6.4","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.2","5":"virginica"},{"1":"6.3","2":"2.8","3":"5.1","4":"1.5","5":"virginica"},{"1":"6.1","2":"2.6","3":"5.6","4":"1.4","5":"virginica"},{"1":"7.7","2":"3.0","3":"6.1","4":"2.3","5":"virginica"},{"1":"6.3","2":"3.4","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.1","3":"5.5","4":"1.8","5":"virginica"},{"1":"6.0","2":"3.0","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.4","4":"2.1","5":"virginica"},{"1":"6.7","2":"3.1","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.1","4":"2.3","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.2","3":"5.9","4":"2.3","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.5","5":"virginica"},{"1":"6.7","2":"3.0","3":"5.2","4":"2.3","5":"virginica"},{"1":"6.3","2":"2.5","3":"5.0","4":"1.9","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.2","4":"2.0","5":"virginica"},{"1":"6.2","2":"3.4","3":"5.4","4":"2.3","5":"virginica"},{"1":"5.9","2":"3.0","3":"5.1","4":"1.8","5":"virginica"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[150]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Read these three LOTR csv’s, saving them to <code>lotr1</code>, <code>lotr2</code>, and <code>lotr3</code>:</p>
@@ -215,6 +266,42 @@ $(document).ready(function () {
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cjEgPSByZWFkX2NzdignaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL1RoZV9GZWxsb3dzaGlwX09mX1RoZV9SaW5nLmNzdicpXG5gYGAifQ== -->
+<pre class="r"><code>lotr1 = read_csv('https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Fellowship_Of_The_Ring.csv')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBGaWxtID0gY29sX2NoYXJhY3RlcigpLFxuICBSYWNlID0gY29sX2NoYXJhY3RlcigpLFxuICBGZW1hbGUgPSBjb2xfaW50ZWdlcigpLFxuICBNYWxlID0gY29sX2ludGVnZXIoKVxuKVxuIn0= -->
+<pre><code>Parsed with column specification:
+cols(
+  Film = col_character(),
+  Race = col_character(),
+  Female = col_integer(),
+  Male = col_integer()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cjIgPSByZWFkX2NzdignaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL1RoZV9Ud29fVG93ZXJzLmNzdicpXG5gYGAifQ== -->
+<pre class="r"><code>lotr2 = read_csv('https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Two_Towers.csv')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBGaWxtID0gY29sX2NoYXJhY3RlcigpLFxuICBSYWNlID0gY29sX2NoYXJhY3RlcigpLFxuICBGZW1hbGUgPSBjb2xfaW50ZWdlcigpLFxuICBNYWxlID0gY29sX2ludGVnZXIoKVxuKVxuIn0= -->
+<pre><code>Parsed with column specification:
+cols(
+  Film = col_character(),
+  Race = col_character(),
+  Female = col_integer(),
+  Male = col_integer()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cjMgPSByZWFkX2NzdignaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL1RoZV9SZXR1cm5fT2ZfVGhlX0tpbmcuY3N2JylcbmBgYCJ9 -->
+<pre class="r"><code>lotr3 = read_csv('https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Return_Of_The_King.csv')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBGaWxtID0gY29sX2NoYXJhY3RlcigpLFxuICBSYWNlID0gY29sX2NoYXJhY3RlcigpLFxuICBGZW1hbGUgPSBjb2xfaW50ZWdlcigpLFxuICBNYWxlID0gY29sX2ludGVnZXIoKVxuKVxuIn0= -->
+<pre><code>Parsed with column specification:
+cols(
+  Film = col_character(),
+  Race = col_character(),
+  Female = col_integer(),
+  Male = col_integer()
+)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -227,6 +314,9 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cl91bnRpZHkgPSBiaW5kX3Jvd3MobG90cjEsIGxvdHIyLCBsb3RyMylcbmBgYCJ9 -->
+<pre class="r"><code>lotr_untidy = bind_rows(lotr1, lotr2, lotr3)</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="2" style="list-style-type: decimal">
@@ -234,6 +324,36 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2F0aGVyKGxvdHJfdW50aWR5LCBrZXkgPSAnR2VuZGVyJywgdmFsdWUgPSAnV29yZCcsIEZlbWFsZSwgTWFsZSlcbmBgYCJ9 -->
+<pre class="r"><code>gather(lotr_untidy, key = 'Gender', value = 'Word', Female, Male)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MTh9LCJyZGYiOiJINHNJQUFBQUFBQUFBK1ZVelVyRFFCQ2UvTFUwV0NrVlBIaktDelNINHRHalZxRVVvUlRzZFp0czIrQjJ0MjVTNHRGWDhPekJ4L0FoaXEvaUl6VE9ick5xYzFSUnhJWGRtZm5tWTdMZnNKbmg2YmpyajMwQXNNRnhIYkFkZEYwYkR3dGNhQ2g3QytBY0tCUjNDM2U3VEJ5TjVqVG9VY1pFbnM2VFpYQTVEUlF5VFBqc0d4bjdLaDdsSWhpSm5NcjBFK2locmtpemxlU21mdis5L2xleS83a0R1Mi9CT1dQVDBxMWRpTWtreVV4aVFQaWY1T3pxcS9Yb2dqRDZTNUU3K0FrZm9La1ZnL3VzWGhMb1pmVkxlNC9Ia3g0VFlPMWhqOVpJT1FHb283VXRnTVlqeGg3bU5nRCtEY1lQbFRIaVJZeWthZGxXQS9veHlVZzRsV1JCcTNTT21LRzc1cDY5aEMyTVB5VFJXN2ZPS1krcE5Ka3JJZU5LdVlZVWVXaEtLcG4ySFI1RlVieWcyVlRJZGJITUVzR1JhcXU1NTFVdWJja0swRnB4VlRydVJQTVZ2KzUwajVVeW5kK3VadW0zUC9qdTlwdE9VZGJ5akJUS1p3azN3anhHSnBTWmZ4czFhQW5oVWliY1BGWWYwVFRNUkVZTXo0OEVNNGdXQjV0WHk5elBSZVlGQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Gender"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Word"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"Female","4":"1229"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Female","4":"14"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Female","4":"0"},{"1":"The Two Towers","2":"Elf","3":"Female","4":"331"},{"1":"The Two Towers","2":"Hobbit","3":"Female","4":"0"},{"1":"The Two Towers","2":"Man","3":"Female","4":"401"},{"1":"The Return Of The King","2":"Elf","3":"Female","4":"183"},{"1":"The Return Of The King","2":"Hobbit","3":"Female","4":"2"},{"1":"The Return Of The King","2":"Man","3":"Female","4":"268"},{"1":"The Fellowship Of The Ring","2":"Elf","3":"Male","4":"971"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Male","4":"3644"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Male","4":"1995"},{"1":"The Two Towers","2":"Elf","3":"Male","4":"513"},{"1":"The Two Towers","2":"Hobbit","3":"Male","4":"2463"},{"1":"The Two Towers","2":"Man","3":"Male","4":"3589"},{"1":"The Return Of The King","2":"Elf","3":"Male","4":"510"},{"1":"The Return Of The King","2":"Hobbit","3":"Male","4":"2673"},{"1":"The Return Of The King","2":"Man","3":"Male","4":"2459"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2F0aGVyKGxvdHJfdW50aWR5LCBrZXkgPSAnR2VuZGVyJywgdmFsdWUgPSAnV29yZCcsIEZlbWFsZTpNYWxlKVxuYGBgIn0= -->
+<pre class="r"><code>gather(lotr_untidy, key = 'Gender', value = 'Word', Female:Male)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MTh9LCJyZGYiOiJINHNJQUFBQUFBQUFBK1ZVelVyRFFCQ2UvTFUwV0NrVlBIaktDelNINHRHalZxRVVvUlRzZFp0czIrQjJ0MjVTNHRGWDhPekJ4L0FoaXEvaUl6VE9ick5xYzFSUnhJWGRtZm5tWTdMZnNKbmg2YmpyajMwQXNNRnhIYkFkZEYwYkR3dGNhQ2g3QytBY0tCUjNDM2U3VEJ5TjVqVG9VY1pFbnM2VFpYQTVEUlF5VFBqc0d4bjdLaDdsSWhpSm5NcjBFK2locmtpemxlU21mdis5L2xleS83a0R1Mi9CT1dQVDBxMWRpTWtreVV4aVFQaWY1T3pxcS9Yb2dqRDZTNUU3K0FrZm9La1ZnL3VzWGhMb1pmVkxlNC9Ia3g0VFlPMWhqOVpJT1FHb283VXRnTVlqeGg3bU5nRCtEY1lQbFRIaVJZeWthZGxXQS9veHlVZzRsV1JCcTNTT21LRzc1cDY5aEMyTVB5VFJXN2ZPS1krcE5Ka3JJZU5LdVlZVWVXaEtLcG4ySFI1RlVieWcyVlRJZGJITUVzR1JhcXU1NTFVdWJja0swRnB4VlRydVJQTVZ2KzUwajVVeW5kK3VadW0zUC9qdTlwdE9VZGJ5akJUS1p3azN3anhHSnBTWmZ4czFhQW5oVWliY1BGWWYwVFRNUkVZTXo0OEVNNGdXQjV0WHk5elBSZVlGQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Gender"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Word"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"Female","4":"1229"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Female","4":"14"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Female","4":"0"},{"1":"The Two Towers","2":"Elf","3":"Female","4":"331"},{"1":"The Two Towers","2":"Hobbit","3":"Female","4":"0"},{"1":"The Two Towers","2":"Man","3":"Female","4":"401"},{"1":"The Return Of The King","2":"Elf","3":"Female","4":"183"},{"1":"The Return Of The King","2":"Hobbit","3":"Female","4":"2"},{"1":"The Return Of The King","2":"Man","3":"Female","4":"268"},{"1":"The Fellowship Of The Ring","2":"Elf","3":"Male","4":"971"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Male","4":"3644"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Male","4":"1995"},{"1":"The Two Towers","2":"Elf","3":"Male","4":"513"},{"1":"The Two Towers","2":"Hobbit","3":"Male","4":"2463"},{"1":"The Two Towers","2":"Man","3":"Male","4":"3589"},{"1":"The Return Of The King","2":"Elf","3":"Male","4":"510"},{"1":"The Return Of The King","2":"Hobbit","3":"Male","4":"2673"},{"1":"The Return Of The King","2":"Man","3":"Male","4":"2459"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2F0aGVyKGxvdHJfdW50aWR5LCBrZXkgPSAnR2VuZGVyJywgdmFsdWUgPSAnV29yZCcsIGNvbnRhaW5zKCdhbGUnKSlcbmBgYCJ9 -->
+<pre class="r"><code>gather(lotr_untidy, key = 'Gender', value = 'Word', contains('ale'))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6MTh9LCJyZGYiOiJINHNJQUFBQUFBQUFBK1ZVelVyRFFCQ2UvTFUwV0NrVlBIaktDelNINHRHalZxRVVvUlRzZFp0czIrQjJ0MjVTNHRGWDhPekJ4L0FoaXEvaUl6VE9ick5xYzFSUnhJWGRtZm5tWTdMZnNKbmg2YmpyajMwQXNNRnhIYkFkZEYwYkR3dGNhQ2g3QytBY0tCUjNDM2U3VEJ5TjVqVG9VY1pFbnM2VFpYQTVEUlF5VFBqc0d4bjdLaDdsSWhpSm5NcjBFK2locmtpemxlU21mdis5L2xleS83a0R1Mi9CT1dQVDBxMWRpTWtreVV4aVFQaWY1T3pxcS9Yb2dqRDZTNUU3K0FrZm9La1ZnL3VzWGhMb1pmVkxlNC9Ia3g0VFlPMWhqOVpJT1FHb283VXRnTVlqeGg3bU5nRCtEY1lQbFRIaVJZeWthZGxXQS9veHlVZzRsV1JCcTNTT21LRzc1cDY5aEMyTVB5VFJXN2ZPS1krcE5Ka3JJZU5LdVlZVWVXaEtLcG4ySFI1RlVieWcyVlRJZGJITUVzR1JhcXU1NTFVdWJja0swRnB4VlRydVJQTVZ2KzUwajVVeW5kK3VadW0zUC9qdTlwdE9VZGJ5akJUS1p3azN3anhHSnBTWmZ4czFhQW5oVWliY1BGWWYwVFRNUkVZTXo0OEVNNGdXQjV0WHk5elBSZVlGQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Gender"],"name":[3],"type":["chr"],"align":["left"]},{"label":["Word"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"Female","4":"1229"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Female","4":"14"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Female","4":"0"},{"1":"The Two Towers","2":"Elf","3":"Female","4":"331"},{"1":"The Two Towers","2":"Hobbit","3":"Female","4":"0"},{"1":"The Two Towers","2":"Man","3":"Female","4":"401"},{"1":"The Return Of The King","2":"Elf","3":"Female","4":"183"},{"1":"The Return Of The King","2":"Hobbit","3":"Female","4":"2"},{"1":"The Return Of The King","2":"Man","3":"Female","4":"268"},{"1":"The Fellowship Of The Ring","2":"Elf","3":"Male","4":"971"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"Male","4":"3644"},{"1":"The Fellowship Of The Ring","2":"Man","3":"Male","4":"1995"},{"1":"The Two Towers","2":"Elf","3":"Male","4":"513"},{"1":"The Two Towers","2":"Hobbit","3":"Male","4":"2463"},{"1":"The Two Towers","2":"Man","3":"Male","4":"3589"},{"1":"The Return Of The King","2":"Elf","3":"Male","4":"510"},{"1":"The Return Of The King","2":"Hobbit","3":"Male","4":"2673"},{"1":"The Return Of The King","2":"Man","3":"Male","4":"2459"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <ol start="3" style="list-style-type: decimal">
@@ -244,6 +364,17 @@ $(document).ready(function () {
 </ol>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cl9saXN0ID0gbGlzdChsb3RyMSwgbG90cjIsIGxvdHIzKVxuZG8uY2FsbChiaW5kX3Jvd3MsIGxvdHJfbGlzdCkgXG5gYGAifQ== -->
+<pre class="r"><code>lotr_list = list(lotr1, lotr2, lotr3)
+do.call(bind_rows, lotr_list) </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6OX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2MVNzVzdDTUJDOXhFNVJvbEloVmVyUUtUOUFCcFl1SFZ0VUNhRktpSUhWQkFOV2pVMlRvSFRzTDNUdTBNL29SMVQ5bm02RXM0bEZ5WWl3Wk4vZHU2Zm52SnhIRDVOZU5Ja0F3QWRDQ2ZnRVUrcmo0UUdGME1RM0FISnRVTndkM0dIZHVCMHZlZHpuVXVveVg0cDEvRHlQRFRJU2FuRkd4cFdweDZXT3g3cmtXWDRDZW1NVmViSEpsTk1mSFBSUDZ4Ny9DZklvNTNWNjhhU25VMUc0eHBDcHMzRUEydlpPb0wvR0s5amxEZXI0Z2NlM0hTTjRsd2N1K1VIcVBVQUxvKzhoOUlWMWdKd3RRUFNLOVdkajNFRXFXWjdYQmgwWXpWakJrbm5HVnJ4SlY0ZzVPcTFCMmhkeTVmSVJTN2t6MWVjckpsMUZoeVkvbGdzelhTWk8wbGp3My9Hb3F1b1B3N1pCYnVsMUliUkNxbS9lWjlENGFDOXJBSjJOTXRLemJycmNxSmR1Nzg0NHMvMzlhdGQ1K0Mrbit6dEpWV3NGemdwWEM2R2NsVUN5S1pmdUZhSUhheUZaWjBLNUVVYUk1a21oQytaNFVhcWxRNnc1Mk80QURvNWsrbzREQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Female"],"name":[3],"type":["int"],"align":["right"]},{"label":["Male"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"1229","4":"971"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"14","4":"3644"},{"1":"The Fellowship Of The Ring","2":"Man","3":"0","4":"1995"},{"1":"The Two Towers","2":"Elf","3":"331","4":"513"},{"1":"The Two Towers","2":"Hobbit","3":"0","4":"2463"},{"1":"The Two Towers","2":"Man","3":"401","4":"3589"},{"1":"The Return Of The King","2":"Elf","3":"183","4":"510"},{"1":"The Return Of The King","2":"Hobbit","3":"2","4":"2673"},{"1":"The Return Of The King","2":"Man","3":"268","4":"2459"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -257,16 +388,69 @@ $(document).ready(function () {
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cl90aWR5IDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL2xvdHJfdGlkeS5jc3ZcIilcbmBgYCJ9 -->
 <pre class="r"><code>lotr_tidy &lt;- read_csv(&quot;https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBGaWxtID0gY29sX2NoYXJhY3RlcigpLFxuICBSYWNlID0gY29sX2NoYXJhY3RlcigpLFxuICBHZW5kZXIgPSBjb2xfY2hhcmFjdGVyKCksXG4gIFdvcmRzID0gY29sX2ludGVnZXIoKVxuKVxuIn0= -->
+<pre><code>Parsed with column specification:
+cols(
+  Film = col_character(),
+  Race = col_character(),
+  Gender = col_character(),
+  Words = col_integer()
+)</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Get word counts across “Race”. Then try “Gender”.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3ByZWFkKGxvdHJfdGlkeSwga2V5ID0gJ1JhY2UnLCB2YWx1ZSA9ICdXb3JkcycpXG5gYGAifQ== -->
+<pre class="r"><code>spread(lotr_tidy, key = 'Race', value = 'Words')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUE1VlN6VW9ETVJDZTdsL3BZa3RCOE9CcFg2Q0w2TldqVnFFVW9leWgxN1JOMjJDYTFPeVc5ZWdyZVBiZ1kvZ1E0Z3Q1NkRvYmQyeGRFR3JZSkRQZjkrMlFiNUxSMWZnOEhJY0E0SURydWVDNEdIb09MZzN3b0ZYdWp3RHVNUVkremk3T29DSk9reVdQK2x4S25hZExzWTd1NWxHSmpJUmFIS3c0c1RuUE5rWVJPemlVN1pSNWt1c28wVGszNlIvbzd6TUhmYjVpa2xlWk45ekYvMk1BMnJZcWVCL1luWGVNMzdCVFc1d0Q3R1JqeDBNSHYwdmJYZ2dmd0k3VzZ4NlBvNG4vTjQ0UWY4SDlHZlYrN1FyOHFXUXBXU0V3bkxHTXhYUERWcnd1VjRpUjNLZHo5NFZja2FNYnJtYmNWSmw3TGVkRTNPckpSR1JFREptcWxXNFpuY2RVdnJUZ1BPRlNGTVVuYnR1YXVLblhtZEFLcGM3KysvbDVXS1lHZERlcUxEM3JUWmNiZGQrN09DdGRXdjU3dEtzNDJJdXJWcmxGelc3QTFVSW91alJmc2dtWDlFTFFnN1VRcjQxUVpEWkVOSTB6blRIU2hWTXRDYkhtWVBzRjQ2MEdtaTREQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Gender"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Elf"],"name":[3],"type":["int"],"align":["right"]},{"label":["Hobbit"],"name":[4],"type":["int"],"align":["right"]},{"label":["Man"],"name":[5],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Female","3":"1229","4":"14","5":"0"},{"1":"The Fellowship Of The Ring","2":"Male","3":"971","4":"3644","5":"1995"},{"1":"The Return Of The King","2":"Female","3":"183","4":"2","5":"268"},{"1":"The Return Of The King","2":"Male","3":"510","4":"2673","5":"2459"},{"1":"The Two Towers","2":"Female","3":"331","4":"0","5":"401"},{"1":"The Two Towers","2":"Male","3":"513","4":"2463","5":"3589"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3ByZWFkKGxvdHJfdGlkeSwga2V5ID0gJ0dlbmRlcicsIHZhbHVlID0gJ1dvcmRzJylcbmBgYCJ9 -->
+<pre class="r"><code>spread(lotr_tidy, key = 'Gender', value = 'Words')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NCwibnJvdyI6OX0sInJkZiI6Ikg0c0lBQUFBQUFBQUE2MVN3VXJEUUJDZEpCdExncFdDNE1GVGZxQkI5T3BSaTFDS1VIcm9kWnR1MjhYdGJrMVM0dEZmOE96QnovQWp4Ty9wclhFMnlhRE5UZWpDN015OGVabmRsOW54M2ZRNm5JWUE0SUxIUEhBOURKbUxtd01NQXV0ZkFMeHppNkwxMElLbWNEbFppV2dnbERKRnRwS2I2SEVSV1dRczlmS0lqSXNxRi9rMjFWUWRIcWQ2WnZOSllhS0pLVVNhL1FzOS9CUGV2Vm8wNGNtRG1jMWtUb1VSMTBmakFIU3JNNEY5Mnh0QnZUNnIwWUZ6aWphc0llZnRsK3Q5SWZVV29JUGUyUU9FendpLzR5Y08rZytzK2ExeCs0bmlHUWtrTUp6em5NZUxsSzlGbTY0Ukl6cHJRRGFRYWszeG1DZUNSQTNFbWl2SzJNakdoKzJDMUJReHRiUVMzRmZjeXJMY29kdTN5QjJ6eWFYUlNIWHQrL1JibDNiU0Z0RGJhdHQ2M2s5V1cvM1V2N215eXFwNnZicE5IUHlKV1gybVZ6YTlmSklpOUZKcWt1SXJQaE9LM2dwcXFDVEVtMVJxR21HSWFCYm5KdWZFQ3hPakNLbkV3ZjRIWGJGZDRZNERBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Female"],"name":[3],"type":["int"],"align":["right"]},{"label":["Male"],"name":[4],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"1229","4":"971"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"14","4":"3644"},{"1":"The Fellowship Of The Ring","2":"Man","3":"0","4":"1995"},{"1":"The Return Of The King","2":"Elf","3":"183","4":"510"},{"1":"The Return Of The King","2":"Hobbit","3":"2","4":"2673"},{"1":"The Return Of The King","2":"Man","3":"268","4":"2459"},{"1":"The Two Towers","2":"Elf","3":"331","4":"513"},{"1":"The Two Towers","2":"Hobbit","3":"0","4":"2463"},{"1":"The Two Towers","2":"Man","3":"401","4":"3589"}],"options":{"columns":{"min":{},"max":[10],"total":[4]},"rows":{"min":[10],"max":[10],"total":[9]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Now try combining race and gender. Use <code>unite()</code> from <code>tidyr</code> instead of <code>paste()</code>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cl90aWR5ICU+JSBcbiAgdW5pdGUoUmFjZV9HZW5kZXIsIFJhY2UsIEdlbmRlcikgJT4lIFxuICBzcHJlYWQoa2V5ID0gJ1JhY2VfR2VuZGVyJywgdmFsdWUgPSAnV29yZHMnKVxuYGBgIn0= -->
+<pre class="r"><code>lotr_tidy %&gt;% 
+  unite(Race_Gender, Race, Gender) %&gt;% 
+  spread(key = 'Race_Gender', value = 'Words')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NywibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMlNzVTdETUJDR0wzRkNTS0JWSlNRR3ByeEFNOUNWRVNxa3FrS3FNblJEYnV1MkZxNWRrbFJoNUJXWUdYZ01IZ0x4U0RTY1UxdHBFOG14NzdzLzUvdnRUTzZudDlFMEFnQVhpRWZBSmJqMFhIdzU0RUdvNXpjQWNvV0xBRWNQQnpHSm0zVE40aUVUUXBYNW1tL2pwMldzeVlUTGxWRmMxekVyZHBtMDJWR1Q3ZW80TFZXY3FwSmxPWkpPWFIyOFg1eS9jZWRSdzhnUHhudnMwbWtZZE91MkQ0OWgzVHVBNkJVZy9EclNhUmVYT0Q0YUZtQzk4QlAxZnN1dVB4YzB6NDFWQzZNRkxXaXl6T2lHdGVVU21aVUhCbnBETGpiMjB3ZXhmQjZ5RFJYTWtITk54azNjZVZTekdTOU9SUmNHSHVtaU1aV3RTcHJVaXRPbXdreVZpVzFNRzNiZjhWVlYxUjlPKzVZNFVOdUNLNGxTVjkreTM3THVaQzNRMjBsZGV0R2ZyM2Z5cFQ4WTZOYnFmSE1SampsNHV3NE9lNUxLMVBKTnJUTW1WMXhhTzc2Z015YnMzNEVlYWd2Sk51T3lzR2VBTkU4S1ZWQ3JpK1pLV0ZLYmcvMC9Ba3BjbmRRQ0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Elf_Female"],"name":[2],"type":["int"],"align":["right"]},{"label":["Elf_Male"],"name":[3],"type":["int"],"align":["right"]},{"label":["Hobbit_Female"],"name":[4],"type":["int"],"align":["right"]},{"label":["Hobbit_Male"],"name":[5],"type":["int"],"align":["right"]},{"label":["Man_Female"],"name":[6],"type":["int"],"align":["right"]},{"label":["Man_Male"],"name":[7],"type":["int"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"1229","3":"971","4":"14","5":"3644","6":"0","7":"1995"},{"1":"The Return Of The King","2":"183","3":"510","4":"2","5":"2673","6":"268","7":"2459"},{"1":"The Two Towers","2":"331","3":"513","4":"0","5":"2463","6":"401","7":"3589"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG90cl90aWR5ICU+JSBcbiAgbXV0YXRlKHggPSBybm9ybShucm93KGxvdHJfdGlkeSkpKSAlPiUgXG4gIHNwcmVhZChrZXkgPSAnR2VuZGVyJywgdmFsdWUgPSAneCcpXG5gYGAifQ== -->
+<pre class="r"><code>lotr_tidy %&gt;% 
+  mutate(x = rnorm(nrow(lotr_tidy))) %&gt;% 
+  spread(key = 'Gender', value = 'x')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6NSwibnJvdyI6MTh9LCJyZGYiOiJINHNJQUFBQUFBQUFBd3R5aVREaWl1QmlZR0JnWW1CbVlXWmdZZ1l5V1ppQUJDTURDd01uaUs1Z1lHQVdCakpZZ1ZnQWlJV2dFbEloR2FrS2JxazVPZm5seFJtWkJRcithUW9na2FETXZQUWhwMElNekU4dEtTM0tnOGw2RDNaWlBoQS9wRHhmSVNTL1BMV29tTTZpcUdtQjJUVW5EWlBKNXBHZmxKUlpncFhIN0p1WWg0VTVhTXhoWU9BRis0K0IrVFF3UTV3RmhRQVEyVENBQVR0UWpHRTdNRy84QTJjY0JxNUNJSnVIZ1lGek5wRDJCZ294UXRSeHpnZnlKd0wxc1VMME13alZmd0RyWCtUQXNQNDZPeXZUOWYxSGN6eStUWjNUQ1JQZi8vclJqZm9zQ1RrWTMvNkdXbGJtNVluNzRQd0QwcFBQTXpKZGhxdC9mMm5PaEJLTmFqaC96eUxwNU1YMnkrSHFQM3dzbGw0N1V4Z3UvK0hUOCszejdtK0M4V0h1c3IvL1ZzaHF6OFVGTUhFWWZZRHhRbFZXejdjMWNQM1BUOTJLbU9teEdXNyt2b2dkMnlVTnNoSHVhWDMrMDllWkQrSCs0aElHTlNOek9QL20ra0kvbHVNZjRPb2Y1MXk5eUhDTkJ5N2ZlZHpJNzB2RFdiUkNpRFU1SjdFWWx1aGdnbHdwaVNXSmVtbEZpYm1wNk1yemdHSXc1YXhRUVJhM3pKeGNHRHNvTVRrVnBqZzh2eWdGbHN6WjNGSnpFM05nVWl5K0lEYXEyWnhGK2VWNk1QTkJhWVNwQVVqOC8vLy9IWkQ2aDZhWVBiK2dKRE0vRDZpVUNia0loWmV0UldnQ0FxVjVJS05UZEpNelN2T3lkWTJOUWQ0RXkwTUFMNVF0aE1SbWhkakovQi9OdjJ5cGVlbVplWEJmNWlRbXBlYkFNalBRRDJBdjZCVVVaZWJCc2dBWFVMUllyeVMvSkJHbWppczVQd2NtQXZZY3d6OEFxY1graURFR0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Film"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Race"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Words"],"name":[3],"type":["int"],"align":["right"]},{"label":["Female"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Male"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"The Fellowship Of The Ring","2":"Elf","3":"971","4":"NA","5":"0.49884468"},{"1":"The Fellowship Of The Ring","2":"Elf","3":"1229","4":"2.0858594","5":"NA"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"14","4":"-0.1673671","5":"NA"},{"1":"The Fellowship Of The Ring","2":"Hobbit","3":"3644","4":"NA","5":"-2.22679599"},{"1":"The Fellowship Of The Ring","2":"Man","3":"0","4":"-0.8714411","5":"NA"},{"1":"The Fellowship Of The Ring","2":"Man","3":"1995","4":"NA","5":"-0.74351232"},{"1":"The Return Of The King","2":"Elf","3":"183","4":"0.3773447","5":"NA"},{"1":"The Return Of The King","2":"Elf","3":"510","4":"NA","5":"0.11854128"},{"1":"The Return Of The King","2":"Hobbit","3":"2","4":"0.1258416","5":"NA"},{"1":"The Return Of The King","2":"Hobbit","3":"2673","4":"NA","5":"-0.98509597"},{"1":"The Return Of The King","2":"Man","3":"268","4":"-0.9944594","5":"NA"},{"1":"The Return Of The King","2":"Man","3":"2459","4":"NA","5":"0.38204670"},{"1":"The Two Towers","2":"Elf","3":"331","4":"-0.1118486","5":"NA"},{"1":"The Two Towers","2":"Elf","3":"513","4":"NA","5":"0.40133317"},{"1":"The Two Towers","2":"Hobbit","3":"0","4":"1.0589477","5":"NA"},{"1":"The Two Towers","2":"Hobbit","3":"2463","4":"NA","5":"-0.60703555"},{"1":"The Two Towers","2":"Man","3":"401","4":"-1.0593030","5":"NA"},{"1":"The Two Towers","2":"Man","3":"3589","4":"NA","5":"0.01258697"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -276,11 +460,69 @@ $(document).ready(function () {
 <p><code>expand</code> vs <code>complete</code> (trim vs keep everything). Together with <code>nesting</code>. Check out the Examples in the <code>expand</code> documentation.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXhwYW5kKG10Y2Fycyx2cywgY3lsKVxuYGBgIn0= -->
+<pre class="r"><code>expand(mtcars,vs, cyl)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEzVlFQUS9DSUJDOVFsdGpFNXNtTG83K2dYWXc3anI0QzV4Y3NWWnRSREF0Zm0zK1pHY0g2OUZDWW9pU3dIdjNlSGZjc1Z5c0p0RXFBZ0FDMUtkQUtGS2Y0T0dCRDMyTk53QTZiQTBBTWU0US9xelo4emZhdkhuU0JmT1J3YkhCUDdyVFNKQnpWdGRJa2k4eDJqREZzbTNGam9WckY2aFpPekVpdWRTRzBmek9uWXgrSmErWnpScG85d09QcG1sZUNHL0gzSk1uVlVxQlZxSS9KM0Q2OGlwSFNNNUNsOTZrK2Y0c0R1bDBxcHR2NzdzMU1Eejg0cVI3a3phbVZtQnFoWVhZbGFLd2czSzJMcmdKWXB5aEhTRTdWYVZROXBkUXJUTWxGYk8rS0pmY0t1MXc4UDRBOURzV3lnc0NBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["vs"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["cyl"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"0","2":"4"},{"1":"0","2":"6"},{"1":"0","2":"8"},{"1":"1","2":"4"},{"1":"1","2":"6"},{"1":"1","2":"8"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gdGliYmxlKFxuICB5ZWFyICAgPSBjKDIwMTAsIDIwMTAsIDIwMTAsIDIwMTAsIDIwMTIsIDIwMTIsIDIwMTIpLFxuICBxdHIgICAgPSBjKCAgIDEsICAgIDIsICAgIDMsICAgIDQsICAgIDEsICAgIDIsICAgIDMpLFxuICByZXR1cm4gPSBybm9ybSg3KSlcbmRmICU+JSBcbiAgICBleHBhbmQoeWVhciwgcXRyKVxuYGBgIn0= -->
+<pre class="r"><code>df &lt;- tibble(
+  year   = c(2010, 2010, 2010, 2010, 2012, 2012, 2012),
+  qtr    = c(   1,    2,    3,    4,    1,    2,    3),
+  return = rnorm(7))
+df %&gt;% 
+    expand(year, qtr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6OH0sInJkZiI6Ikg0c0lBQUFBQUFBQUE0VlFRVzdDTUJCYzdLU0VTS0JJZlVkOHFMZzNCMTdBaWFzSnBvbEk3ZFF4QW03OHBGL3NrUk5obmRnU3N0VFdrajNqMmRuMXJ0ZXJ6VnU2U1FHQUFJMG9FSW8wSW5oTUlJS1p4VE1BZlIwTUFBdmNTZkZkZ1YyL1kvc24ranJ2UCtPbGNHS1JPTXhHL0M4ZU5CcVhEZTg2Sk5tVG1PNjQ0V3l2K2FjSTdSSTFieWRPakM2Q2E4ZnBsOUZCemt5ckUvTjVjNXQzeGFQdit4dkNQVEJQVld0cUpkRks3UGZGUVdjVEhRalpVZHJTdTd5c2p2S1FMNWUyL1NFK3Jybmp5Uk1uNDV1MGQ3VmlWK3RGeUk5YUNqOXF3N2VpY1pjRnpqQ013RnBkUytQL0NkV09HV1c0OTZXbGFyd3lEQWYzQitVTitCRXRBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["qtr"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"2010","2":"1"},{"1":"2010","2":"2"},{"1":"2010","2":"3"},{"1":"2010","2":"4"},{"1":"2012","2":"1"},{"1":"2012","2":"2"},{"1":"2012","2":"3"},{"1":"2012","2":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgJT4lIFxuICBleHBhbmQoeWVhciwgZnVsbF9zZXEoeWVhciwgMSksIHF0cilcbmBgYCJ9 -->
+<pre class="r"><code>df %&gt;% 
+  expand(year, full_seq(year, 1), qtr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6MjR9LCJyZGYiOiJINHNJQUFBQUFBQUFBODFUc1U3RE1CUjh0Uk9na1ZvRnNYUmtCSWxHQW5VbkExL0ExSzB5cVVzampKMDZqb0NOUCtIM0dQbUNodWZFbGlvdlpZbUVKZnZPOTU3T09TdCtmRmplSmNzRUFBalFpQUtoU0NPQ3l3Z2lHRnQ4QjZBWFNHeGxpbk9XZjIzQmp1R3dHaFQvbmtNY3dXUG5EZXZ2Yzl6LzlKdmNpZm1adzdUSC8xNFBmcmk0RUt5dWthUUhZckptaG1VYnpWNTUyQzVSOCszVWlkRUhaOXJ4ODAwanhLcm11eXNyM2x6ZVhyc0MzUmtkbUkyMWVzdTg0UVFuK2NTbGJkdHZoSDNRZktvcVV5cUpyY1MranpqNDVKRU9oTFNSMW5vOUw3YU5mSmt2RmpaWFYrL0h4UEhaQWFmOW1iUjFYckh6T3VIeXVaVGMzNEZnVDF5NHpSUXpkQkd5U3BmUytBdEV0YzZNTXN6M0pZVVNYdW5Dd2Y0WHVNNU9CdzRFQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["full_seq(year, 1)"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["qtr"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2010","2":"2010","3":"1"},{"1":"2010","2":"2010","3":"2"},{"1":"2010","2":"2010","3":"3"},{"1":"2010","2":"2010","3":"4"},{"1":"2010","2":"2011","3":"1"},{"1":"2010","2":"2011","3":"2"},{"1":"2010","2":"2011","3":"3"},{"1":"2010","2":"2011","3":"4"},{"1":"2010","2":"2012","3":"1"},{"1":"2010","2":"2012","3":"2"},{"1":"2010","2":"2012","3":"3"},{"1":"2010","2":"2012","3":"4"},{"1":"2012","2":"2010","3":"1"},{"1":"2012","2":"2010","3":"2"},{"1":"2012","2":"2010","3":"3"},{"1":"2012","2":"2010","3":"4"},{"1":"2012","2":"2011","3":"1"},{"1":"2012","2":"2011","3":"2"},{"1":"2012","2":"2011","3":"3"},{"1":"2012","2":"2011","3":"4"},{"1":"2012","2":"2012","3":"1"},{"1":"2012","2":"2012","3":"2"},{"1":"2012","2":"2012","3":"3"},{"1":"2012","2":"2012","3":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[24]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShleHBlcmltZW50KVxuZXhwZXJpbWVudCAlPiUgZXhwYW5kKG5lc3RpbmcobmFtZSwgdHJ0KSwgcmVwKVxuYGBgIn0= -->
+<pre class="r"><code>library(experiment)
+experiment %&gt;% expand(nesting(name, trt), rep)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gZXZhbChsaHMsIHBhcmVudCwgcGFyZW50KSA6IG9iamVjdCAnZXhwZXJpbWVudCcgbm90IGZvdW5kXG4ifQ== -->
+<pre><code>Error in eval(lhs, parent, parent) : object 'experiment' not found</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>separate_rows</code>: useful when you have a variable number of entries in a “cell”.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gZGF0YS5mcmFtZShcbiAgeCA9IDE6MyxcbiAgeSA9IGMoXCJhXCIsIFwiZCxlLGZcIiwgXCJnLGhcIiksXG4gIHogPSBjKFwiMVwiLCBcIjIsMyw0XCIsIFwiNSw2XCIpLFxuICBzdHJpbmdzQXNGYWN0b3JzID0gRkFMU0UpXG5kZiAlPiUgc2VwYXJhdGVfcm93cyh5LHosIGNvbnZlcnQgPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code>df &lt;- data.frame(
+  x = 1:3,
+  y = c(&quot;a&quot;, &quot;d,e,f&quot;, &quot;g,h&quot;),
+  z = c(&quot;1&quot;, &quot;2,3,4&quot;, &quot;5,6&quot;),
+  stringsAsFactors = FALSE)
+df %&gt;% separate_rows(y,z, convert = TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MywibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUEyMVF5dzZDTUJCY1d0Qklvakh4TytSZ2pGL2dGM2p5V2dHVmlLMkJFaDhudjF6ZDF0MmdLTW5DZEpmWm1lbHF1WjdGNnhnQUJNaFFncEFJUTRHdkFFSVl1TzhGUUU0UXVNa1FxK2VIanRDV3BCcjdPUkVWZzR4QnptRExZTWRnLzJlNzk0SVZ2ZnRmdGlLdGpubE5rckwxU3VESzROYmhEU3B6VHBqckJNVWQvUE1qa0phcVpnRnV4cG15S3RsV3lNZlRvMFBwbTVNdGpFYVNtSkR0VDNKUWRScmpSanNuMlRUZE4vb3duUytjQXVVSHNoZlFuVENXYjAzeHBGMFI3ZXJsZWxkb3Z1Q29WSnU4cE1NSUkvdkV5YWtxdE9VbzJLMFRhNnppLytMVWxOeng0ZUR4QXI3M29SSWZBZ0FBIn0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["int"],"align":["right"]},{"label":["y"],"name":[2],"type":["chr"],"align":["left"]},{"label":["z"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"1","2":"a","3":"1"},{"1":"2","2":"d","3":"2"},{"1":"2","2":"e","3":"3"},{"1":"2","2":"f","3":"4"},{"1":"3","2":"g","3":"5"},{"1":"3","2":"h","3":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>unite</code> and <code>separate</code>.</p>
@@ -291,6 +533,37 @@ $(document).ready(function () {
 <p><code>uncount</code> (as the opposite of <code>dplyr::count()</code>)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gdGliYmxlOjp0aWJibGUoeCA9IGMoXCJhXCIsIFwiYlwiKSwgbiA9IGMoMSwgMikpXG51bmNvdW50KGRmLCBuKVxuYGBgIn0= -->
+<pre class="r"><code>df &lt;- tibble::tibble(x = c(&quot;a&quot;, &quot;b&quot;), n = c(1, 2))
+uncount(df, n)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVFTdzZDTUJBZEtHZ2cwWkI0RHJzd0psN0FFN2hpV3o0cXNiWUVTblRweGFWT3NRMmhpODY4dnI3NXZGN08rU0hOVXdBSWdVUUVRb0l3Q2pFRUVFRmk4aHVBN0NZQ0lNTkQzQU56b0pqQnNqWXVPZXQ3VytmSXRHS0swV3ZIbnJVdkY4ajVjak4vb1VvNithSk91VEdiZnpCb3JiK1lSays4bHExcXBFQnBhRHpFZnZQT0k3SkJtTmJWdnJ3UDRyRS9uc3pDMWp6WWVjSDBDVE1PL2pPSnRyMWkyMnRWaTFzamFtZU9zNkxtOXJKRkQ1TUYybmFOVU81bmtPMnBrb281WFZwSzdwakpISXcvVGpGbjFiSUJBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"a"},{"1":"b"},{"1":"b"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudW5jb3VudChkZiwgbiwgLmlkID0gXCJpZFwiKVxuYGBgIn0= -->
+<pre class="r"><code>uncount(df, n, .id = &quot;id&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVF5dzZDTUJCY1d0QkFvaUh4TytCZ1RQd0J2OEFUMS9KUWlkZ1NLTkdqUHk2NGhXNUlldGp1ZERxZDd2UjZ5WTVSRmdFQUErNXpZQnloejNEeHdJZlE5QThBUDh3Q2dCaUwwNEVna0s4QVlEZEx6UDJsbU9NWEZJM29lK3RGWkZRS0xkSmJKMTZWSzVmSWtaeXRNeTJBMWFXakR6djFUdW1PbVlWOWNabW02WWR0ZE1SYjFlcGFTWlF5a3pCd3B2STZoNGdIYWF6THBIZ004cG1jem1aMG14UHNlNTdOVDlqbTU1UDFDcXpYcHBMM1dsWVVzeEY1MWRqTkhqUE1FZEsycTZXbVAwSzJUN1hTZ25SUm9ScGk1bkF3L2dGcm9pa3MwQUVBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]},{"label":["id"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"a","2":"1"},{"1":"b","2":"1"},{"1":"b","2":"2"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudW5jb3VudChkZiwgbilcbmBgYCJ9 -->
+<pre class="r"><code>uncount(df, n)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MSwibnJvdyI6M30sInJkZiI6Ikg0c0lBQUFBQUFBQUExMVFTdzZDTUJBZEtHZ2cwWkI0RHJzd0psN0FFN2hpV3o0cXNiWUVTblRweGFWT3NRMmhpODY4dnI3NXZGN08rU0hOVXdBSWdVUUVRb0l3Q2pFRUVFRmk4aHVBN0NZQ0lNTkQzQU56b0pqQnNqWXVPZXQ3VytmSXRHS0swV3ZIbnJVdkY4ajVjak4vb1VvNithSk91VEdiZnpCb3JiK1lSays4bHExcXBFQnBhRHpFZnZQT0k3SkJtTmJWdnJ3UDRyRS9uc3pDMWp6WWVjSDBDVE1PL2pPSnRyMWkyMnRWaTFzamFtZU9zNkxtOXJKRkQ1TUYybmFOVU81bmtPMnBrb281WFZwSzdwakpISXcvVGpGbjFiSUJBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["x"],"name":[1],"type":["chr"],"align":["left"]}],"data":[{"1":"a"},{"1":"b"},{"1":"b"}],"options":{"columns":{"min":{},"max":[10],"total":[1]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>drop_na</code> and <code>replace_na</code></p>
@@ -301,6 +574,17 @@ $(document).ready(function () {
 <p><code>fill</code></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGYgPC0gZGF0YS5mcmFtZShNb250aCA9IDE6MTIsIFllYXIgPSBjKDIwMDAsIHJlcChOQSwgMTEpKSlcbmRmICU+JSBmaWxsKFllYXIpXG5gYGAifQ== -->
+<pre class="r"><code>df &lt;- data.frame(Month = 1:12, Year = c(2000, rep(NA, 11)))
+df %&gt;% fill(Year)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTJ9LCJyZGYiOiJINHNJQUFBQUFBQUFBN1ZRdTQ3Q01CRGNPQW1QWEVCSWZFZFNuSzY1am9MMkdpb29UV0tPNklJZE9VWkh5Wi93cDhEYVdVdklQWmJHKzhqT1pNZWI5Zll6MjJZQXdDQk9ZbUF4cGduREs0SUVwalplQU9LbEd3Q1lJWEwzY2FqZE5DSkZqQkJqeEFSaGlWYjBnK2JuTnE1dUs3RG5YVEZZUEpYOEpIcE1GbTVaYXY0b2FZNVVKRHZCZGNDYWF2VmZlcWExeTY2RGRoN0tWeTN2dmJ4dlpqVTN2RHhvNUdOMUR5aGoxWmxHU1NTeEpUM2FLem5TUVdOeGxuYVR1cWlPWi9sWGZIM1RxMFprZDBaNS9wS3o0Wi9zUVZvcGFZMkUvRzJrOE11M2ZDOWFLdVpvMlRrdU85MUk0NjFndHkrTk10elBaWlZxZmNlWmcvc1QrM3lsUmo4Q0FBQT0ifQ== -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["Month"],"name":[1],"type":["int"],"align":["right"]},{"label":["Year"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"2000"},{"1":"2","2":"2000"},{"1":"3","2":"2000"},{"1":"4","2":"2000"},{"1":"5","2":"2000"},{"1":"6","2":"2000"},{"1":"7","2":"2000"},{"1":"8","2":"2000"},{"1":"9","2":"2000"},{"1":"10","2":"2000"},{"1":"11","2":"2000"},{"1":"12","2":"2000"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[12]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p><code>full_seq</code></p>
@@ -315,7 +599,7 @@ $(document).ready(function () {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAnY20wMDkgRXhlcmNpc2VzOiB0aWR5IGRhdGEnCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgZGZfcHJpbnQ6IHBhZ2VkCiAgaHRtbF9ub3RlYm9vazogZGVmYXVsdAogIHBkZl9kb2N1bWVudDogZGVmYXVsdAplZGl0b3Jfb3B0aW9uczoKICBjaHVua19vdXRwdXRfdHlwZTogaW5saW5lCi0tLQoKYGBge3J9CnN1cHByZXNzUGFja2FnZVN0YXJ0dXBNZXNzYWdlcyhsaWJyYXJ5KHRpZHl2ZXJzZSkpCmBgYAoKIyMgUmVhZGluZyBhbmQgV3JpdGluZyBEYXRhOiBFeGVyY2lzZXMKCk1ha2UgYSB0aWJibGUgb2YgbGV0dGVycywgdGhlaXIgb3JkZXIgaW4gdGhlIGFscGhhYmV0LCBhbmQgdGhlbiBhIHBhc3Rpbmcgb2YgdGhlIHR3byBjb2x1bW5zIHRvZ2V0aGVyLgoKYGBge3J9CgpgYGAKCk1ha2UgYSB0aWJibGUgb2YgdGhyZWUgbmFtZXMgYW5kIGNvbW11dGUgdGltZXMuCgpgYGB7cn0KCmBgYAoKCldyaXRlIHRoZSBgaXJpc2AgZGF0YSBmcmFtZSBhcyBhIGBjc3ZgLiAKCmBgYHtyfQoKYGBgCgpXcml0ZSB0aGUgYGlyaXNgIGRhdGEgZnJhbWUgdG8gYSBmaWxlIGRlbGltaXRlZCBieSBhIGRvbGxhciBzaWduLiAKCmBgYHtyfQoKYGBgCgpSZWFkIHRoZSBkb2xsYXItZGVsaW1pdGVkIGBpcmlzYCBkYXRhIHRvIGEgdGliYmxlLgoKYGBge3J9CgpgYGAKClJlYWQgdGhlc2UgdGhyZWUgTE9UUiBjc3Yncywgc2F2aW5nIHRoZW0gdG8gYGxvdHIxYCwgYGxvdHIyYCwgYW5kIGBsb3RyM2A6CgotIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qZW5ueWJjL2xvdHItdGlkeS9tYXN0ZXIvZGF0YS9UaGVfRmVsbG93c2hpcF9PZl9UaGVfUmluZy5jc3YKLSBodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vamVubnliYy9sb3RyLXRpZHkvbWFzdGVyL2RhdGEvVGhlX1R3b19Ub3dlcnMuY3N2Ci0gaHR0cHM6Ly9naXRodWIuY29tL2plbm55YmMvbG90ci10aWR5L2Jsb2IvbWFzdGVyL2RhdGEvVGhlX1JldHVybl9PZl9UaGVfS2luZy5jc3YKCmBgYHtyfQoKYGBgCgojIyBgZ2F0aGVyKClgCgooRXhlcmNpc2VzIGxhcmdlbHkgYmFzZWQgb2ZmIG9mIEplbm55IEJyeWFuJ3MgW2dhdGhlciB0dXRvcmlhbF0oaHR0cHM6Ly9naXRodWIuY29tL2plbm55YmMvbG90ci10aWR5L2Jsb2IvbWFzdGVyLzAyLWdhdGhlci5tZCkpCgpUaGlzIGZ1bmN0aW9uIGlzIHVzZWZ1bCBmb3IgbWFraW5nIHVudGlkeSBkYXRhIHRpZHkgKHNvIHRoYXQgY29tcHV0ZXJzIGNhbiBtb3JlIGVhc2lseSBjcnVuY2ggdGhlIG51bWJlcnMpLgoKMS4gQ29tYmluZSB0aGUgdGhyZWUgTE9UUiB1bnRpZHkgdGFibGVzIChgbG90cjFgLCBgbG90cjJgLCBgbG90cjNgKSB0byBhIHNpbmdsZSB1bnRpZHkgdGFibGUgYnkgc3RhY2tpbmcgdGhlbS4gIAoKYGBge3J9CgpgYGAKCjIuIENvbnZlcnQgdG8gdGlkeS4gQWxzbyB0cnkgdGhpcyBieSBzcGVjaWZ5aW5nIGNvbHVtbnMgYXMgYSByYW5nZSwgYW5kIHdpdGggdGhlIGBjb250YWlucygpYCBmdW5jdGlvbi4KCmBgYHtyfQoKYGBgCgozLiBUcnkgYWdhaW4gKGJpbmQgYW5kIHRpZHkgdGhlIHRocmVlIHVudGlkeSBkYXRhIGZyYW1lcyksIGJ1dCB3aXRob3V0IGtub3dpbmcgaG93IG1hbnkgdGFibGVzIHRoZXJlIGFyZSBvcmlnaW5hbGx5LiAKICAgIC0gVGhlIGFkZGl0aW9uYWwgd29yayBoZXJlIGRvZXMgbm90IHJlcXVpcmUgYW55IGFkZGl0aW9uYWwgdG9vbHMgZnJvbSB0aGUgdGlkeXZlcnNlLCBidXQgaW5zdGVhZCB1c2VzIGEgYGRvLmNhbGxgIGZyb20gYmFzZSBSIC0tIGEgdXNlZnVsIHRvb2wgaW4gZGF0YSBhbmFseXNpcyB3aGVuIHRoZSBudW1iZXIgb2YgIml0ZW1zIiBpcyB2YXJpYWJsZS91bmtub3duLCBvciBxdWl0ZSBsYXJnZS4gCgpgYGB7cn0KCmBgYAoKIyMgYHNwcmVhZCgpYAoKKEV4ZXJjaXNlcyBsYXJnZWx5IGJhc2VkIG9mZiBvZiBKZW5ueSBCcnlhbidzIFtzcHJlYWQgdHV0b3JpYWxdKGh0dHBzOi8vZ2l0aHViLmNvbS9qZW5ueWJjL2xvdHItdGlkeS9ibG9iL21hc3Rlci8wMy1zcHJlYWQubWQpKQoKVGhpcyBmdW5jdGlvbiBpcyB1c2VmdWwgZm9yIG1ha2luZyB0aWR5IGRhdGEgdW50aWR5ICh0byBiZSBtb3JlIHBsZWFzaW5nIHRvIHRoZSBleWUpLgoKUmVhZCBpbiB0aGUgdGlkeSBMT1RSIGRhdGEgKGRlc3BpdGUgaGF2aW5nIGp1c3QgbWFkZSBpdCk6CgpgYGB7cn0KbG90cl90aWR5IDwtIHJlYWRfY3N2KCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vamVubnliYy9sb3RyLXRpZHkvbWFzdGVyL2RhdGEvbG90cl90aWR5LmNzdiIpCmBgYAoKR2V0IHdvcmQgY291bnRzIGFjcm9zcyAiUmFjZSIuIFRoZW4gdHJ5ICJHZW5kZXIiLiAKCmBgYHtyfQoKYGBgCgpOb3cgdHJ5IGNvbWJpbmluZyByYWNlIGFuZCBnZW5kZXIuIFVzZSBgdW5pdGUoKWAgZnJvbSBgdGlkeXJgIGluc3RlYWQgb2YgYHBhc3RlKClgLiAKCmBgYHtyfQoKYGBgCgojIyBPdGhlciBgdGlkeXJgIGdvb2RpZXMKCkNoZWNrIG91dCB0aGUgRXhhbXBsZXMgaW4gdGhlIGRvY3VtZW50YXRpb24gdG8gZXhwbG9yZSB0aGUgZm9sbG93aW5nLgoKYGV4cGFuZGAgdnMgYGNvbXBsZXRlYCAodHJpbSB2cyBrZWVwIGV2ZXJ5dGhpbmcpLiBUb2dldGhlciB3aXRoIGBuZXN0aW5nYC4gQ2hlY2sgb3V0IHRoZSBFeGFtcGxlcyBpbiB0aGUgYGV4cGFuZGAgZG9jdW1lbnRhdGlvbi4KCmBgYHtyfQoKYGBgCgpgc2VwYXJhdGVfcm93c2A6IHVzZWZ1bCB3aGVuIHlvdSBoYXZlIGEgdmFyaWFibGUgbnVtYmVyIG9mIGVudHJpZXMgaW4gYSAiY2VsbCIuCgpgYGB7cn0KCmBgYAoKYHVuaXRlYCBhbmQgYHNlcGFyYXRlYC4KCmBgYHtyfQoKYGBgCgpgdW5jb3VudGAgKGFzIHRoZSBvcHBvc2l0ZSBvZiBgZHBseXI6OmNvdW50KClgKQoKYGBge3J9CgpgYGAKCgpgZHJvcF9uYWAgYW5kIGByZXBsYWNlX25hYAoKYGBge3J9CgpgYGAKCmBmaWxsYAoKYGBge3J9CgpgYGAKCgpgZnVsbF9zZXFgCgpgYGB7cn0KCmBgYAoKCiMjIFRpbWUgcmVtYWluaW5nPwoKVGltZSBwZXJtaXR0aW5nLCBkbyBbdGhpcyBleGVyY2lzZV0oaHR0cHM6Ly9naXRodWIuY29tL2plbm55YmMvbG90ci10aWR5L2Jsb2IvbWFzdGVyLzAyLWdhdGhlci5tZCNleGVyY2lzZXMpIHRvIHByYWN0aWNlIHRpZHlpbmcgZGF0YS4g</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAnY20wMDkgRXhlcmNpc2VzOiB0aWR5IGRhdGEnCm91dHB1dDoKICBnaXRodWJfZG9jdW1lbnQKLS0tCgpgYGB7cn0Kc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKGxpYnJhcnkodGlkeXZlcnNlKSkKYGBgCgojIyBSZWFkaW5nIGFuZCBXcml0aW5nIERhdGE6IEV4ZXJjaXNlcwoKTWFrZSBhIHRpYmJsZSBvZiBsZXR0ZXJzLCB0aGVpciBvcmRlciBpbiB0aGUgYWxwaGFiZXQsIGFuZCB0aGVuIGEgcGFzdGluZyBvZiB0aGUgdHdvIGNvbHVtbnMgdG9nZXRoZXIuCgpgYGB7cn0KdGliYmxlKGxldCA9IGxldHRlcnMsCiAgICAgICBudW0gPSAxOmxlbmd0aChsZXR0ZXJzKSwgCiAgICAgICBjb21iID0gcGFzdGUwKGxldCxudW0pKQoKCmBgYAoKTWFrZSBhIHRpYmJsZSBvZiB0aHJlZSBuYW1lcyBhbmQgY29tbXV0ZSB0aW1lcy4KCmBgYHtyfQp0cmliYmxlKH5uYW1lLCB+dGltZSwKICAgICAgICAiVmV0bGUiLCAzMCwgCiAgICAgICAgIkVsaWFzIiwgMTUsCiAgICAgICAgIkVyaWsgQXJuZSIsIDQwKQpgYGAKCgpXcml0ZSB0aGUgYGlyaXNgIGRhdGEgZnJhbWUgYXMgYSBgY3N2YC4gCgpgYGB7cn0Kd3JpdGVfY3N2KGlyaXMsICJpcmlzLmNzdiIpCgoKYGBgCgpXcml0ZSB0aGUgYGlyaXNgIGRhdGEgZnJhbWUgdG8gYSBmaWxlIGRlbGltaXRlZCBieSBhIGRvbGxhciBzaWduLiAKCmBgYHtyfQoKd3JpdGVfZGVsaW0oaXJpcywgImlyaXMudHh0IiwgZGVsaW0gPSAnJCcpCgpgYGAKClJlYWQgdGhlIGRvbGxhci1kZWxpbWl0ZWQgYGlyaXNgIGRhdGEgdG8gYSB0aWJibGUuCgpgYGB7cn0KCnJlYWRfZGVsaW0oImlyaXMudHh0IiwgZGVsaW0gPSAnJCcpCmBgYAoKUmVhZCB0aGVzZSB0aHJlZSBMT1RSIGNzdidzLCBzYXZpbmcgdGhlbSB0byBgbG90cjFgLCBgbG90cjJgLCBhbmQgYGxvdHIzYDoKCi0gaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL1RoZV9GZWxsb3dzaGlwX09mX1RoZV9SaW5nLmNzdgotIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qZW5ueWJjL2xvdHItdGlkeS9tYXN0ZXIvZGF0YS9UaGVfVHdvX1Rvd2Vycy5jc3YKLSBodHRwczovL2dpdGh1Yi5jb20vamVubnliYy9sb3RyLXRpZHkvYmxvYi9tYXN0ZXIvZGF0YS9UaGVfUmV0dXJuX09mX1RoZV9LaW5nLmNzdgoKYGBge3J9Cgpsb3RyMSA9IHJlYWRfY3N2KCdodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vamVubnliYy9sb3RyLXRpZHkvbWFzdGVyL2RhdGEvVGhlX0ZlbGxvd3NoaXBfT2ZfVGhlX1JpbmcuY3N2JykKCmxvdHIyID0gcmVhZF9jc3YoJ2h0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qZW5ueWJjL2xvdHItdGlkeS9tYXN0ZXIvZGF0YS9UaGVfVHdvX1Rvd2Vycy5jc3YnKQoKbG90cjMgPSByZWFkX2NzdignaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2plbm55YmMvbG90ci10aWR5L21hc3Rlci9kYXRhL1RoZV9SZXR1cm5fT2ZfVGhlX0tpbmcuY3N2JykKCmBgYAoKIyMgYGdhdGhlcigpYAoKKEV4ZXJjaXNlcyBsYXJnZWx5IGJhc2VkIG9mZiBvZiBKZW5ueSBCcnlhbidzIFtnYXRoZXIgdHV0b3JpYWxdKGh0dHBzOi8vZ2l0aHViLmNvbS9qZW5ueWJjL2xvdHItdGlkeS9ibG9iL21hc3Rlci8wMi1nYXRoZXIubWQpKQoKVGhpcyBmdW5jdGlvbiBpcyB1c2VmdWwgZm9yIG1ha2luZyB1bnRpZHkgZGF0YSB0aWR5IChzbyB0aGF0IGNvbXB1dGVycyBjYW4gbW9yZSBlYXNpbHkgY3J1bmNoIHRoZSBudW1iZXJzKS4KCjEuIENvbWJpbmUgdGhlIHRocmVlIExPVFIgdW50aWR5IHRhYmxlcyAoYGxvdHIxYCwgYGxvdHIyYCwgYGxvdHIzYCkgdG8gYSBzaW5nbGUgdW50aWR5IHRhYmxlIGJ5IHN0YWNraW5nIHRoZW0uICAKCmBgYHtyfQoKbG90cl91bnRpZHkgPSBiaW5kX3Jvd3MobG90cjEsIGxvdHIyLCBsb3RyMykKCmBgYAoKMi4gQ29udmVydCB0byB0aWR5LiBBbHNvIHRyeSB0aGlzIGJ5IHNwZWNpZnlpbmcgY29sdW1ucyBhcyBhIHJhbmdlLCBhbmQgd2l0aCB0aGUgYGNvbnRhaW5zKClgIGZ1bmN0aW9uLgoKYGBge3J9CgpnYXRoZXIobG90cl91bnRpZHksIGtleSA9ICdHZW5kZXInLCB2YWx1ZSA9ICdXb3JkJywgRmVtYWxlLCBNYWxlKQpnYXRoZXIobG90cl91bnRpZHksIGtleSA9ICdHZW5kZXInLCB2YWx1ZSA9ICdXb3JkJywgRmVtYWxlOk1hbGUpCmdhdGhlcihsb3RyX3VudGlkeSwga2V5ID0gJ0dlbmRlcicsIHZhbHVlID0gJ1dvcmQnLCBjb250YWlucygnYWxlJykpCgoKYGBgCgozLiBUcnkgYWdhaW4gKGJpbmQgYW5kIHRpZHkgdGhlIHRocmVlIHVudGlkeSBkYXRhIGZyYW1lcyksIGJ1dCB3aXRob3V0IGtub3dpbmcgaG93IG1hbnkgdGFibGVzIHRoZXJlIGFyZSBvcmlnaW5hbGx5LiAKICAgIC0gVGhlIGFkZGl0aW9uYWwgd29yayBoZXJlIGRvZXMgbm90IHJlcXVpcmUgYW55IGFkZGl0aW9uYWwgdG9vbHMgZnJvbSB0aGUgdGlkeXZlcnNlLCBidXQgaW5zdGVhZCB1c2VzIGEgYGRvLmNhbGxgIGZyb20gYmFzZSBSIC0tIGEgdXNlZnVsIHRvb2wgaW4gZGF0YSBhbmFseXNpcyB3aGVuIHRoZSBudW1iZXIgb2YgIml0ZW1zIiBpcyB2YXJpYWJsZS91bmtub3duLCBvciBxdWl0ZSBsYXJnZS4gCgpgYGB7cn0KCmxvdHJfbGlzdCA9IGxpc3QobG90cjEsIGxvdHIyLCBsb3RyMykKCmRvLmNhbGwoYmluZF9yb3dzLCBsb3RyX2xpc3QpIAoKYGBgCgojIyBgc3ByZWFkKClgCgooRXhlcmNpc2VzIGxhcmdlbHkgYmFzZWQgb2ZmIG9mIEplbm55IEJyeWFuJ3MgW3NwcmVhZCB0dXRvcmlhbF0oaHR0cHM6Ly9naXRodWIuY29tL2plbm55YmMvbG90ci10aWR5L2Jsb2IvbWFzdGVyLzAzLXNwcmVhZC5tZCkpCgpUaGlzIGZ1bmN0aW9uIGlzIHVzZWZ1bCBmb3IgbWFraW5nIHRpZHkgZGF0YSB1bnRpZHkgKHRvIGJlIG1vcmUgcGxlYXNpbmcgdG8gdGhlIGV5ZSkuCgpSZWFkIGluIHRoZSB0aWR5IExPVFIgZGF0YSAoZGVzcGl0ZSBoYXZpbmcganVzdCBtYWRlIGl0KToKCmBgYHtyfQpsb3RyX3RpZHkgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9qZW5ueWJjL2xvdHItdGlkeS9tYXN0ZXIvZGF0YS9sb3RyX3RpZHkuY3N2IikKYGBgCgpHZXQgd29yZCBjb3VudHMgYWNyb3NzICJSYWNlIi4gVGhlbiB0cnkgIkdlbmRlciIuIAoKYGBge3J9CgpzcHJlYWQobG90cl90aWR5LCBrZXkgPSAnUmFjZScsIHZhbHVlID0gJ1dvcmRzJykKc3ByZWFkKGxvdHJfdGlkeSwga2V5ID0gJ0dlbmRlcicsIHZhbHVlID0gJ1dvcmRzJykKCmBgYAoKTm93IHRyeSBjb21iaW5pbmcgcmFjZSBhbmQgZ2VuZGVyLiBVc2UgYHVuaXRlKClgIGZyb20gYHRpZHlyYCBpbnN0ZWFkIG9mIGBwYXN0ZSgpYC4gCgpgYGB7cn0KbG90cl90aWR5ICU+JSAKICB1bml0ZShSYWNlX0dlbmRlciwgUmFjZSwgR2VuZGVyKSAlPiUgCiAgc3ByZWFkKGtleSA9ICdSYWNlX0dlbmRlcicsIHZhbHVlID0gJ1dvcmRzJykKCmxvdHJfdGlkeSAlPiUgCiAgbXV0YXRlKHggPSBybm9ybShucm93KGxvdHJfdGlkeSkpKSAlPiUgCiAgc3ByZWFkKGtleSA9ICdHZW5kZXInLCB2YWx1ZSA9ICd4JykKCmBgYAoKIyMgT3RoZXIgYHRpZHlyYCBnb29kaWVzCgpDaGVjayBvdXQgdGhlIEV4YW1wbGVzIGluIHRoZSBkb2N1bWVudGF0aW9uIHRvIGV4cGxvcmUgdGhlIGZvbGxvd2luZy4KCmBleHBhbmRgIHZzIGBjb21wbGV0ZWAgKHRyaW0gdnMga2VlcCBldmVyeXRoaW5nKS4gVG9nZXRoZXIgd2l0aCBgbmVzdGluZ2AuIENoZWNrIG91dCB0aGUgRXhhbXBsZXMgaW4gdGhlIGBleHBhbmRgIGRvY3VtZW50YXRpb24uCgpgYGB7cn0KCmV4cGFuZChtdGNhcnMsdnMsIGN5bCkKCmRmIDwtIHRpYmJsZSgKICB5ZWFyICAgPSBjKDIwMTAsIDIwMTAsIDIwMTAsIDIwMTAsIDIwMTIsIDIwMTIsIDIwMTIpLAogIHF0ciAgICA9IGMoICAgMSwgICAgMiwgICAgMywgICAgNCwgICAgMSwgICAgMiwgICAgMyksCiAgcmV0dXJuID0gcm5vcm0oNykpCgpkZiAlPiUgCiAgICBleHBhbmQoeWVhciwgcXRyKQoKZGYgJT4lIAogIGV4cGFuZCh5ZWFyLCBmdWxsX3NlcSh5ZWFyLCAxKSwgcXRyKQoKI2xpYnJhcnkoZXhwZXJpbWVudCkKCiNleHBlcmltZW50ICU+JSBleHBhbmQobmVzdGluZyhuYW1lLCB0cnQpLCByZXApCmBgYAoKYHNlcGFyYXRlX3Jvd3NgOiB1c2VmdWwgd2hlbiB5b3UgaGF2ZSBhIHZhcmlhYmxlIG51bWJlciBvZiBlbnRyaWVzIGluIGEgImNlbGwiLgoKYGBge3J9CgpkZiA8LSBkYXRhLmZyYW1lKAogIHggPSAxOjMsCiAgeSA9IGMoImEiLCAiZCxlLGYiLCAiZyxoIiksCiAgeiA9IGMoIjEiLCAiMiwzLDQiLCAiNSw2IiksCiAgc3RyaW5nc0FzRmFjdG9ycyA9IEZBTFNFKQoKZGYgJT4lIHNlcGFyYXRlX3Jvd3MoeSx6LCBjb252ZXJ0ID0gVFJVRSkKCmBgYAoKYHVuaXRlYCBhbmQgYHNlcGFyYXRlYC4KCmBgYHtyfQoKCgpgYGAKCmB1bmNvdW50YCAoYXMgdGhlIG9wcG9zaXRlIG9mIGBkcGx5cjo6Y291bnQoKWApCgpgYGB7cn0KZGYgPC0gdGliYmxlOjp0aWJibGUoeCA9IGMoImEiLCAiYiIpLCBuID0gYygxLCAyKSkKdW5jb3VudChkZiwgbikKdW5jb3VudChkZiwgbiwgLmlkID0gImlkIikKCnVuY291bnQoZGYsIG4pCgoKYGBgCgoKYGRyb3BfbmFgIGFuZCBgcmVwbGFjZV9uYWAKCmBgYHtyfQoKYGBgCgpgZmlsbGAKCmBgYHtyfQoKZGYgPC0gZGF0YS5mcmFtZShNb250aCA9IDE6MTIsIFllYXIgPSBjKDIwMDAsIHJlcChOQSwgMTEpKSkKCmRmICU+JSBmaWxsKFllYXIpCgpgYGAKCgpgZnVsbF9zZXFgCgpgYGB7cn0KCgoKYGBgCgoKIyMgVGltZSByZW1haW5pbmc/CgpUaW1lIHBlcm1pdHRpbmcsIGRvIFt0aGlzIGV4ZXJjaXNlXShodHRwczovL2dpdGh1Yi5jb20vamVubnliYy9sb3RyLXRpZHkvYmxvYi9tYXN0ZXIvMDItZ2F0aGVyLm1kI2V4ZXJjaXNlcykgdG8gcHJhY3RpY2UgdGlkeWluZyBkYXRhLiA=</div>
 
 
 
