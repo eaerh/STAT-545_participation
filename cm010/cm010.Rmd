@@ -193,7 +193,7 @@ setdiff(z,y)
 ```{r}
 (x <- tibble(x1 = c("B", "C", "D"), x3 = 2:4))
 
-intersect(y,x)
+#intersect(y,x)
 
 ```
 
@@ -237,8 +237,8 @@ anti_join(flights2,weather)
 ### 2. Can we apply `set` and `binding` funcions between `flights2` and `weather` datasets. Why and why not?
 
 ```{r}
-union(flights2,weather)
-bind_rows(flights2, weather)
+#union(flights2,weather)
+#bind_rows(flights2, weather)
 #bind_cols(flights2, weather)
 ```
 
